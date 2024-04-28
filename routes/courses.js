@@ -3,9 +3,6 @@ const router = express.Router();
 const Joi = require('joi');
 
 router.use(express.json());
-
-
-
 const courses = [
     {id:1, name:'Math'},
     {id:2, name:'Biology'},
@@ -66,7 +63,7 @@ router.put('/:id',(req,res) =>{
 
 });
 // HANDLING DELETE
-
+//  git config --global user.email "najeemnurudeen1990@gmail.com"
 router.delete('/:id',(req,res) =>{
     const course = courses.find(c => c.id === parseInt(req.params.id));
     if (!course) return res.status(404).send("The course with the given ID was found");
